@@ -270,7 +270,7 @@ type LinuxBlockIO struct {
 	ThrottleWriteBpsDevice []LinuxThrottleDevice `json:"throttleWriteBpsDevice,omitempty"`
 	// IO read rate limit per cgroup per device, IO per second
 	ThrottleReadIOPSDevice []LinuxThrottleDevice `json:"throttleReadIOPSDevice,omitempty"`
-	// IO write rate limit per cgroup per device, IO per second
+// IO write rate limit per cgroup per device, IO per second
 	ThrottleWriteIOPSDevice []LinuxThrottleDevice `json:"throttleWriteIOPSDevice,omitempty"`
 }
 
@@ -288,6 +288,8 @@ type LinuxMemory struct {
 	KernelTCP *int64 `json:"kernelTCP,omitempty"`
 	// How aggressive the kernel will swap memory pages.
 	Swappiness *uint64 `json:"swappiness,omitempty"`
+	// Where the kernel will swap memory pages.
+	Swapfile *string `json:"swapfile,omitempty"`
 	// DisableOOMKiller disables the OOM killer for out of memory conditions
 	DisableOOMKiller *bool `json:"disableOOMKiller,omitempty"`
 }

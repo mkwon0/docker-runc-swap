@@ -396,6 +396,9 @@ func createCgroupConfig(opts *CreateOpts) (*configs.Cgroup, error) {
 			if r.Memory.Swappiness != nil {
 				c.Resources.MemorySwappiness = r.Memory.Swappiness
 			}
+			if r.Memory.Swapfile != nil {
+				c.Resources.MemorySwapfile = r.Memory.Swapfile
+			}
 			if r.Memory.DisableOOMKiller != nil {
 				c.Resources.OomKillDisable = *r.Memory.DisableOOMKiller
 			}
